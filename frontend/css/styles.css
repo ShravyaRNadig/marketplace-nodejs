@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Reusing the existing styles */
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Product listing styles */
+/* Heading Styles */
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Center the product list */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Styling for the product name and price */
+.product-item h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Basic styling for product list */
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;  /* Padding: top, right, bottom, left */
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Edit and Delete Buttons */
+.edit-btn, .delete-btn {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #4CAF50;  /* Green */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;  /* Darker Green */
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #f44336;  /* Red */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;  /* Darker Red */
+}
+
+/* Additional styling to make the buttons look more consistent */
+.edit-btn:focus, .delete-btn:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly scale down when button is clicked */
+}
+
+
+/* Add Product Form Styles */
+form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Links (Register and Login links) */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .product-card {
+        width: 48%;
+    }
+
+    .product-list {
+        gap: 10px;
+    }
+}
+
+/* Media Query for very small screens (mobile) */
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    button.btn {
+        font-size: 14px;
+    }
+}

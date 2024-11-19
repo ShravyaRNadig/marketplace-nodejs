@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Ensure path to styles.css is correct -->
+</head>
+<body>
+    <div class="container">
+        <h2>Create a New Account</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        // Handle form submission for user registration
+        const registerForm = document.getElementById('register-form');
+        
+        registerForm.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Sending the data to the backend API
+            const response = await fetch('/api/users/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',  // Ensure Content-Type is set to JSON
+                },
+                body: JSON.stringify({ email, password }) // Sending email and password as JSON
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // If the registration is successful
+                alert('Registration successful! Please log in.');
+                window.location.href = 'login.html'; // Redirect to login page after successful registration
+            } else {
+                // If there's an error with registration
+                alert(data.message || 'Registration failed. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

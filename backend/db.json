@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "1731999034132",
+      "name": "Laptop",
+      "price": 1000
+    },
+    {
+      "id": "1731999057972",
+      "name": "Smartphone",
+      "price": 500
+    },
+    {
+      "id": "1731999110998",
+      "name": "Headphones",
+      "price": 150
+    },
+    {
+      "id": "1731999599970",
+      "name": "Smartwatch",
+      "price": 250
+    }
+  ],
+  "users": [
+    {
+      "id": "1731998183300",
+      "email": "user1@example.com",
+      "password": "user1"
+    }
+  ]
+}
